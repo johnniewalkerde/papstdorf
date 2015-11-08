@@ -82,27 +82,27 @@
         })
       });
       // OSM layers
-			var mapnik = new OpenLayers.Layer.OSM.Mapnik("Mapnik");	
-			var tilesathome = new OpenLayers.Layer.OSM.Osmarender("Osmarender");			
-			var cyclemap = new OpenLayers.Layer.OSM.CycleMap("CycleMap");
+			var mapnik = new ol.Layer.OSM.Mapnik("Mapnik");	
+			var tilesathome = new ol.Layer.OSM.Osmarender("Osmarender");			
+			var cyclemap = new ol.Layer.OSM.CycleMap("CycleMap");
  
 			// Google Layers          
-			var gmap = new OpenLayers.Layer.Google("Google Map", {sphericalMercator:true, numZoomLevels: 21});
-                        var gphy = new OpenLayers.Layer.Google("Google Physical", {type: G_PHYSICAL_MAP,sphericalMercator:true, numZoomLevels: 16} );
-			var gsat = new OpenLayers.Layer.Google("Google Satellite", {type: G_SATELLITE_MAP, sphericalMercator:true,numZoomLevels: 21} );
+			var gmap = new ol.Layer.Google("Google Map", {sphericalMercator:true, numZoomLevels: 21});
+                        var gphy = new ol.Layer.Google("Google Physical", {type: G_PHYSICAL_MAP,sphericalMercator:true, numZoomLevels: 16} );
+			var gsat = new ol.Layer.Google("Google Satellite", {type: G_SATELLITE_MAP, sphericalMercator:true,numZoomLevels: 21} );
  
 			// Bing Maps layers
-			var aerial = new OpenLayers.Layer.VirtualEarth("Bing Satellite", {type: VEMapStyle.Aerial, sphericalMercator:true, numZoomLevels: 19});
-			var shaded = new OpenLayers.Layer.VirtualEarth("Bing Map", {type: VEMapStyle.Shaded, sphericalMercator:true, numZoomLevels: 21});
+			var aerial = new ol.Layer.VirtualEarth("Bing Satellite", {type: VEMapStyle.Aerial, sphericalMercator:true, numZoomLevels: 19});
+			var shaded = new ol.Layer.VirtualEarth("Bing Map", {type: VEMapStyle.Shaded, sphericalMercator:true, numZoomLevels: 21});
  
 			// Yahoo layers
-			var yahoosat = new OpenLayers.Layer.Yahoo("Yahoo Satellite",{'type': YAHOO_MAP_SAT, 'sphericalMercator': true,attribution: '<a href="http://info.yahoo.com/legal/us/yahoo/maps/mapstou/">Terms of Use</a> for <a href="http://maps.yahoo.com/">Yahoo Local Maps</a>, Uses GeoLite data by <a href="http://maxmind.com/">MaxMind</a>', numZoomLevels:18 });
-			var yahoostreet = new OpenLayers.Layer.Yahoo( "Yahoo Street", { 'sphericalMercator': true, attribution: '<a href="http://info.yahoo.com/legal/us/yahoo/maps/mapstou/">Terms of Use</a> for <a href="http://maps.yahoo.com/">Yahoo Local Maps</a>, Uses GeoLite data by <a href="http://maxmind.com/">MaxMind</a>', numZoomLevels:18 } );
+			var yahoosat = new ol.Layer.Yahoo("Yahoo Satellite",{'type': YAHOO_MAP_SAT, 'sphericalMercator': true,attribution: '<a href="http://info.yahoo.com/legal/us/yahoo/maps/mapstou/">Terms of Use</a> for <a href="http://maps.yahoo.com/">Yahoo Local Maps</a>, Uses GeoLite data by <a href="http://maxmind.com/">MaxMind</a>', numZoomLevels:18 });
+			var yahoostreet = new ol.Layer.Yahoo( "Yahoo Street", { 'sphericalMercator': true, attribution: '<a href="http://info.yahoo.com/legal/us/yahoo/maps/mapstou/">Terms of Use</a> for <a href="http://maps.yahoo.com/">Yahoo Local Maps</a>, Uses GeoLite data by <a href="http://maxmind.com/">MaxMind</a>', numZoomLevels:18 } );
  
  
 		  map.addLayers([ mapnik,tilesathome,cyclemap,gmap,gphy,gsat,aerial,shaded,yahoosat,yahoostreet ] );
  
-		  map.addControl(new OpenLayers.Control.LayerSwitcher());
+		  map.addControl(new ol.Control.LayerSwitcher());
     </script>
         </section>
 
